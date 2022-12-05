@@ -1,4 +1,4 @@
-require('dotenv').config()
+// require('dotenv').config()
 // require('express-async-errors')
 const BodyParser = require("body-parser");
 const Card = require('../Server/Model/cardModel');
@@ -8,7 +8,7 @@ const mongoose = require('mongoose')
 
 
 try {
-    db = mongoose.connect(process.env.DATABASE_URL,
+    db = mongoose.connect("mongodb+srv://tejas0504:tejas0504@cluster0.oiqm9nm.mongodb.net/?retryWrites=true&w=majority",
       
     console.log("DB connected..."),
     );   // to connect Database wiht url
