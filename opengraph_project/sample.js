@@ -12,7 +12,7 @@ let ax = openGraph(url, ( error, result) => {
     // console.log(typeof result.title);    
     // // return result;     /// this is object 
     // //  let data = result;  
-    console.log(result);    
+    // console.log(result);    
     // // let me = JSON.parse(result);
     // // return me;
     // let a = document.getElementById("title_name");

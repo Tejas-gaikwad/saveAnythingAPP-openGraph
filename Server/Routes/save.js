@@ -35,10 +35,10 @@ router.get('/showThisCard', (req, res, next) => {                    /////      
     urlLink = req.query.urlLink;
 
 
-    console.log(urlLink);
+    // console.log(urlLink);
     // "https://medium.com/smma";
        let ax = opengraph(urlLink, ( error, result) => {
-        console.log(result);    
+        // console.log(result);    
         res.send(result)  
         return next()       
     },  );
@@ -63,10 +63,10 @@ router.post('/saveCard', async (req, res, next) => {            //////       Thi
     type = req.body.type,
     site_name = req.body.site_name
     description = req.body.description,
-    date = req.body.date,
+    date = req.body.date
 
     // console.log(title);
-    console.log(` url is --- ${url  } `);
+    // console.log(` url is --- ${url  } `);
     // console.log(imageUrl);
     // console.log(description);
     // console.log(type);
@@ -89,19 +89,19 @@ router.post('/saveCard', async (req, res, next) => {            //////       Thi
             // return console.log("Result...");
         
 
-        console.log(req.body.url);
+        // console.log(req.body.url);
 
        if (existCard) {
         //  console.log('This card is already present');
          res.status(204).json({"res" : "Content is already present..."})
        }else{
-        console.log('This card is saved...');
+        // console.log('This card is saved...');
         card.save()
         .then((result) => res.status(200).send(result))
         .catch((err)=> res.send(err))
        }
     
-
+next()
 
 })
 
